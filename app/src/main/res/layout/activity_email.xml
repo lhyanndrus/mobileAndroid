@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Campo para o Destinatário -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Para:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etDestinatario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="exemplo@email.com"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
+
+    <!-- Campo para o Assunto -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Assunto:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etAssunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o assunto"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <!-- Campo para o Corpo da Mensagem -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mensagem:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etMensagem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top|start"
+        android:hint="Escreva sua mensagem aqui..."
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
+    <!-- Botão de Enviar -->
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Enviar E-mail" />
 
 </LinearLayout>
